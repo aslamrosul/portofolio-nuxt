@@ -17,6 +17,11 @@
 </template>
 
 <script setup>
+const { fetchPortfolio } = usePortfolio()
+
+// Fetch portfolio data on page load
+await fetchPortfolio()
+
 useHead({
   title: 'Aslam Rosul Ahmad - Web Developer & Security Enthusiast',
   link: [

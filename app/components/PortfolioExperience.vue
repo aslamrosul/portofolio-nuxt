@@ -4,7 +4,7 @@
       <span>02.</span> Edukasi & Pengalaman
     </h2>
     <div class="timeline" data-fade>
-      <div class="timeline-item">
+      <div v-if="!experience || experience.length === 0" class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2023 - Sekarang</div>
         <div class="timeline-content">
@@ -17,9 +17,23 @@
           </p>
         </div>
       </div>
+      <div v-else v-for="exp in experience" :key="exp.id" class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">{{ exp.period }}</div>
+        <div class="timeline-content">
+          <h3>{{ exp.institution }}</h3>
+          <h4>{{ exp.position }}</h4>
+          <p>{{ exp.description }}</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const { data } = usePortfolio()
+const experience = computed(() => data.value?.experience)
+</script>
 
 <style scoped>
 .section-container {

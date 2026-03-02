@@ -5,18 +5,21 @@
     </h2>
     <div class="contact-content" data-fade>
       <p class="contact-text">
-        Saat ini saya sedang aktif mencari peluang magang (Internship) di
-        bidang Web Development atau Cyber Security. Jika Anda memiliki
-        pertanyaan atau penawaran, jangan ragu untuk menghubungi saya!
+        {{ contact?.text || 'Saat ini saya sedang aktif mencari peluang magang (Internship) di bidang Web Development atau Cyber Security. Jika Anda memiliki pertanyaan atau penawaran, jangan ragu untuk menghubungi saya!' }}
       </p>
       <a
-        href="mailto:nvrsrndrmrx@gmail.com"
+        :href="`mailto:${contact?.email || 'nvrsrndrmrx@gmail.com'}`"
         class="btn btn-primary contact-btn"
         >Kirim Email</a
       >
     </div>
   </section>
 </template>
+
+<script setup>
+const { data } = usePortfolio()
+const contact = computed(() => data.value?.contact)
+</script>
 
 <style scoped>
 .section-container {

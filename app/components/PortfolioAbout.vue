@@ -4,27 +4,24 @@
     <div class="about-grid" data-fade>
       <div class="about-text">
         <p class="justify">
-          Saya Aslam Rosul Ahmad, seorang Mahasiswa Politeknik Negeri Malang
-          jurusan Teknik Informatika. Saya memiliki ketertarikan dalam
-          pengembangan web dan mobile, analisis data, serta keamanan siber
-          (pentesting). Bagi saya, teknologi bukan hanya tentang membuat
-          sesuatu berfungsi, tetapi juga memastikan sistem tersebut efisien,
-          aman, dan bermanfaat bagi pengguna. Saya terus belajar dan
-          mengerjakan proyek nyata untuk mengasah kemampuan dalam
-          pemrograman, pengelolaan data, serta pemecahan masalah di dunia
-          IT.
+          {{ about?.text || 'Saya Aslam Rosul Ahmad, seorang Mahasiswa Politeknik Negeri Malang jurusan Teknik Informatika. Saya memiliki ketertarikan dalam pengembangan web dan mobile, analisis data, serta keamanan siber (pentesting). Bagi saya, teknologi bukan hanya tentang membuat sesuatu berfungsi, tetapi juga memastikan sistem tersebut efisien, aman, dan bermanfaat bagi pengguna. Saya terus belajar dan mengerjakan proyek nyata untuk mengasah kemampuan dalam pemrograman, pengelolaan data, serta pemecahan masalah di dunia IT.' }}
         </p>
       </div>
       <div class="about-photo-container">
         <img
           class="about-photo"
-          src="/profil.jpg"
-          alt="Foto Aslam Rosul Ahmad"
+          :src="about?.image || '/profil.jpg'"
+          alt="Foto Profil"
         />
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const { data } = usePortfolio()
+const about = computed(() => data.value?.about)
+</script>
 
 <style scoped>
 .section-container {

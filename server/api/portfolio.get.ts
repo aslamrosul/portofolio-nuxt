@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
       hero: {
         intro: hero?.intro || '',
         name: hero?.name || '',
-        roles: hero?.roles.map((r) => r.text) || [],
+        roles: hero?.roles?.map((r) => r.text) || [],
         description: hero?.description || ''
       },
       about: {

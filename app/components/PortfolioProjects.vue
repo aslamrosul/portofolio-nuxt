@@ -4,80 +4,124 @@
       <span>03.</span> Proyek Unggulan
     </h2>
 
-    <div class="project-grid featured" data-fade>
-      <div class="project-content">
-        <span class="project-label">Proyek Laravel</span>
-        <h3 class="project-title">
-          <a href="https://github.com/aslamrosul/PBL_KEL1_FASILITAS">Sistem Pelaporan Kerusakan Fasilitas - FixIT</a>
-        </h3>
-        <div class="project-desc">
-          <p>
-            Bekerja sama dengan beberapa mahasiswa saat semester 5, membangun sistem pelaporan dan perbaikan fasilitas kampus
-            berbasis web untuk Jurusan Teknologi Informasi Polinema
-            menggunakan Laravel 10 dan MySQL. Fitur utama mencakup
-            multi-role login, pelaporan kerusakan dengan foto, prioritas
-            perbaikan berbasis DSS, serta laporan dan statistik fasilitas.
-          </p>
+    <div v-if="!featuredProjects || featuredProjects.length === 0">
+      <div class="project-grid featured" data-fade>
+        <div class="project-content">
+          <span class="project-label">Proyek Laravel</span>
+          <h3 class="project-title">
+            <a href="https://github.com/aslamrosul/PBL_KEL1_FASILITAS">Sistem Pelaporan Kerusakan Fasilitas - FixIT</a>
+          </h3>
+          <div class="project-desc">
+            <p>
+              Bekerja sama dengan beberapa mahasiswa saat semester 5, membangun sistem pelaporan dan perbaikan fasilitas kampus
+              berbasis web untuk Jurusan Teknologi Informasi Polinema
+              menggunakan Laravel 10 dan MySQL. Fitur utama mencakup
+              multi-role login, pelaporan kerusakan dengan foto, prioritas
+              perbaikan berbasis DSS, serta laporan dan statistik fasilitas.
+            </p>
+          </div>
+          <ul class="project-tech">
+            <li>Laravel</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/aslamrosul/PBL_KEL1_FASILITAS" target="_blank" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+          </div>
         </div>
-        <ul class="project-tech">
-          <li>Laravel</li>
-          <li>PHP</li>
-          <li>MySQL</li>
-          <li>JavaScript</li>
-          <li>Bootstrap</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://github.com/aslamrosul/PBL_KEL1_FASILITAS" target="_blank" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
+        <div class="project-image">
+          <a href="#" target="_blank">
+            <img src="/project1.jpg" alt="Screenshot Proyek 1" />
           </a>
         </div>
       </div>
-      <div class="project-image">
-        <a href="#" target="_blank">
-          <img src="/project1.jpg" alt="Screenshot Proyek 1" />
-        </a>
+
+      <div class="project-grid featured reversed" data-fade>
+        <div class="project-content">
+          <span class="project-label">Proyek Keamanan & Data</span>
+          <h3 class="project-title">
+            <a href="https://github.com/dedybayu/Project_MongoDB_Basdat/">Sistem Informasi Portal Berita - <br> KataData</a>
+          </h3>
+          <div class="project-desc">
+            <p>
+              Bekerja sama dengan beberapa mahasiswa saat semester 3, membangun web portal berita berbasis MongoDB dengan PHP, HTML,
+              CSS, dan JavaScript. Fitur utama: CRUD berita, kategori,
+              pencarian, notifikasi, berita trending, serta dashboard admin
+              dan halaman utama pengguna.
+            </p>
+          </div>
+          <ul class="project-tech">
+            <li>PHP</li>
+            <li>MongoDB</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/dedybayu/Project_MongoDB_Basdat/" target="_blank" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-image">
+          <a href="#" target="_blank">
+            <img src="/project2.jpg" alt="Screenshot Proyek 2" />
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="project-grid featured reversed" data-fade>
+    <div v-else v-for="(project, index) in featuredProjects" :key="project.id" 
+         class="project-grid featured" 
+         :class="{ 'reversed': index % 2 !== 0 }" 
+         data-fade>
       <div class="project-content">
-        <span class="project-label">Proyek Keamanan & Data</span>
+        <span class="project-label">{{ project.label }}</span>
         <h3 class="project-title">
-          <a href="https://github.com/dedybayu/Project_MongoDB_Basdat/">Sistem Informasi Portal Berita - <br> KataData</a>
+          <a :href="project.github || '#'" target="_blank">{{ project.title }}</a>
         </h3>
         <div class="project-desc">
-          <p>
-            Bekerja sama dengan beberapa mahasiswa saat semester 3, membangun web portal berita berbasis MongoDB dengan PHP, HTML,
-            CSS, dan JavaScript. Fitur utama: CRUD berita, kategori,
-            pencarian, notifikasi, berita trending, serta dashboard admin
-            dan halaman utama pengguna.
-          </p>
+          <p>{{ project.description }}</p>
         </div>
         <ul class="project-tech">
-          <li>PHP</li>
-          <li>MongoDB</li>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li v-for="tech in project.technologies" :key="tech">{{ tech }}</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/dedybayu/Project_MongoDB_Basdat/" target="_blank" aria-label="GitHub">
+          <a v-if="project.github" :href="project.github" target="_blank" aria-label="GitHub">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a v-if="project.demo" :href="project.demo" target="_blank" aria-label="Demo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
             </svg>
           </a>
         </div>
       </div>
       <div class="project-image">
-        <a href="#" target="_blank">
-          <img src="/project2.jpg" alt="Screenshot Proyek 2" />
+        <a :href="project.demo || project.github || '#'" target="_blank">
+          <img :src="project.image || '/project1.jpg'" :alt="project.title" />
         </a>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const { data } = usePortfolio()
+const featuredProjects = computed(() => data.value?.projects?.featured)
+</script>
 
 <style scoped>
 .section-container {

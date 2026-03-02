@@ -11,11 +11,14 @@
         <li><a href="#contact"><span>04.</span> Kontak</a></li>
       </ul>
     </nav>
-    <a href="cv.pdf" class="btn" target="_blank">Download CV</a>
+    <a :href="settings?.cvUrl || 'cv.pdf'" class="btn" target="_blank">Download CV</a>
   </header>
 </template>
 
 <script setup>
+const { data } = usePortfolio()
+const settings = computed(() => data.value?.settings)
+
 onMounted(() => {
   let lastScrollTop = 0
   const navbar = document.querySelector('.navbar')

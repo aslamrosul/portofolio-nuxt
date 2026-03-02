@@ -1,17 +1,15 @@
 <template>
   <section class="hero" id="hero">
     <div class="hero-content" data-fade>
-      <p class="hero-intro">Halo, nama saya</p>
-      <h1 class="hero-name glitch" data-text="Aslam Rosul Ahmad.">
-        Aslam Rosul Ahmad.
+      <p class="hero-intro">{{ hero?.intro || 'Halo, nama saya' }}</p>
+      <h1 class="hero-name glitch" :data-text="hero?.name || 'Aslam Rosul Ahmad.'">
+        {{ hero?.name || 'Aslam Rosul Ahmad.' }}
       </h1>
       <h2 class="hero-subtitle">
         Saya <span class="typing-effect"></span>
       </h2>
       <p class="hero-desc">
-        Saya seorang mahasiswa Teknik Informatika di Politeknik Negeri
-        Malang dengan fokus pada Web Development, Analisis Data, dan
-        Keamanan Siber. Saya membangun (dan mengamankan) aplikasi web.
+        {{ hero?.description || 'Saya seorang mahasiswa Teknik Informatika di Politeknik Negeri Malang dengan fokus pada Web Development, Analisis Data, dan Keamanan Siber. Saya membangun (dan mengamankan) aplikasi web.' }}
       </p>
       <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
     </div>
@@ -20,15 +18,20 @@
 </template>
 
 <script setup>
+const { data } = usePortfolio()
+const hero = computed(() => data.value?.hero)
+
 onMounted(() => {
   if (typeof window.Typed !== 'undefined') {
+    const roles = hero.value?.roles || [
+      'Web Developer.',
+      'Security Enthusiast.',
+      'Data Analyst.',
+      'Mobile Developer.'
+    ]
+    
     const typed = new window.Typed('.typing-effect', {
-      strings: [
-        'Web Developer.',
-        'Security Enthusiast.',
-        'Data Analyst.',
-        'Mobile Developer.'
-      ],
+      strings: roles,
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 2000,
